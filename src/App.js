@@ -3,7 +3,8 @@ import './App.css';
 
 class App extends React.Component{
   state = {
-    isButtonClicked:false
+    isButtonClicked:false,
+    popa: '1'
   }
 
   render(){
