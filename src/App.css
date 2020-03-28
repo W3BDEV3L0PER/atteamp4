@@ -1,16 +1,16 @@
 .App {
-  text-align: center;
+    text-align: center;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
 }
 
 .on {
@@ -18,12 +18,12 @@
     background-color: rgb(48, 177, 43);
 }
 
-.off{
+.off {
     padding: 10px 10px;
     background-color: rgb(187, 21, 19);
 }
 
-#card{
+#card {
     display: block;
     height: 300px;
     width: 400px;
@@ -31,4 +31,12 @@
     perspective: 1300px;
     margin: 50px;
     transition: 0.2s;
+    border-radius: 5%;
+}
+
+#ball {
+    height: 50px;
+    width: 50px;
+    background: rgb(64, 57, 180);
+    border-radius: 25px;
 }

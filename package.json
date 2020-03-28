@@ -1,7 +1,7 @@
 {
   "homepage": "https://w3bdev3l0per.github.io/atteamp4/",
   "name": "attemp4",
-  "license" : "BSD-3-Clause",
+  "license": "BSD-3-Clause",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -10,6 +10,7 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "dnd": "^0.1.0",
     "gh-pages": "^2.2.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",

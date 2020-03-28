@@ -26,8 +26,50 @@ class App extends React.Component{
                 elem.style.transform = "rotateX(0) rotateY(0)"
             }}>
             </div>
+            <div id="ball" onMouseDown={function(e){
+
+                let ball = document.getElementById('ball')
+
+                let shiftX = e.clientX - ball.getBoundingClientRect().left
+                let shiftY = e.clientY - ball.getBoundingClientRect().top
+
+                ball.style.position = 'absolute'
+                ball.style.zIndex = 1000
+
+                function moveAt(pageX, pageY) {
+                    ball.style.left = pageX - shiftX + 'px'
+                    ball.style.top = pageY - shiftY + 'px'
+                }
+
+                moveAt(e.pageX, e.pageY)
+
+                function onMouseMove(e) {
+                    moveAt(e.pageX, e.pageY)
+                }
+
+                document.addEventListener('mousemove', onMouseMove);
+
+                ball.onmouseup = function() {
+                    document.removeEventListener('mousemove', onMouseMove);
+                    ball.onmouseup = null;
+                }
+
+                ball.ondragstart = function() {
+                    return false
+                }
+        }}>
+            </div>
+            <textarea id="txt">
+                {localStorage.getItem('txt')}
+            </textarea>
+            <button id="btn" onClick={function(e){
+                    let getText = document.getElementById('txt').value
+                    localStorage.setItem('txt',getText)
+            }}>
+            </button>
            </header>
           </div>
+
       );
     }
 }
